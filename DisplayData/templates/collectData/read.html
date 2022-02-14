@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readings</title>
+</head>
+<body onload = "JavaScript:AutoRefresh(2000);">
+<style>
+
+body{
+outline: 1px solid black;
+background-color: white;
+}
+h1{
+text-align: center;
+}
+
+
+
+#div1
+{
+text-align: center;
+background-color: whitesmoke;
+width:33%;
+float: right;
+font-size: 120%;
+height: 150px;
+}
+
+
+#div2
+{
+background-color: whitesmoke;
+text-align: center;
+width:33%;
+float: left;
+font-size: 120%;
+height: 150px;
+}
+
+#div3
+{
+text-align: center;
+background-color: whitesmoke;
+width:33.1%;
+margin: 0 auto;
+font-size: 120%;
+height: 150px;
+}
+
+h2{
+    text-align: center;
+}
+button:active
+{
+background-color: #00ae57;
+color: white;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+#btn{
+    text-align: center;
+}
+
+</style>
+
+
+    
+  <br>
+  <br>
+  <br>
+<header style="text-align: center; font-size: 150%;">SMART AGRICULTURE WITH IRRIGATION CONTROL</header>
+    <h1>READINGS</h1>
+<div id= "div1"><b>TEMPERATURE:</b>
+    <br>
+    <div id = "pg1">
+       
+        <meter id="temp_meter" value="{{temperature}}" min="0" max="100"></meter><br>
+        <h3 id="temp_value" style="display: inline-block;"> {{temperature}} </h3>
+</div>
+</div>
+<div id= "div2"><b>HUMIDITY:</b>
+    <br>
+    <div id = "pg1">
+       
+        <meter id="hum_meter" value="{{humidity}}" min="0" max="100"></meter><br>
+        <h3 id="hum_value" style="display: inline-block;"> {{humidity}} </h3>
+    </div>
+</div>
+<div
+id= "div3"><b>MOISTURE:</b>
+<br>
+<div id="pg2">
+    <meter id="moist" value="{{moisture}}" min="0" max="100"></meter><br>
+    <h3 style="display: inline-block;">{{moisture}}</h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+<H2>WATER PUMP CONTROL</H2>
+<div id= "btn">
+    <form action = "/change" method = "get">
+        <input type="submit" value="ON" name="PUMP">
+        <input type="submit" value="OFF" name="PUMP">
+    </form>
+</div>
+<br>
+<br>
+<br>
+
+</body>
+
+<script type = "text/JavaScript">
+    <!--
+       function AutoRefresh( t ) {
+          setTimeout("location.reload(true);", t);
+       }
+    -->
+</script>
+</html>
